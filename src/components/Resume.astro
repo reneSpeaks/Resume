@@ -21,7 +21,7 @@ import avatar from '../assets/avatar.png';
     </div>
 </section>
 
-<div id="sections" class="flex flex-col w-full items-center justify-center gap-16 mt-16">
+<div id="sections" class="flex flex-col w-full items-center justify-center gap-16 my-16 p-4">
     <section id="languages" class="max-w-4xl w-full">
         <ul class="flex flex-row gap-6 text-white font-bold text-2xl">
             <li class="bg-blue-950 p-2"><span class="text-yellow-300">German</span> native</li>
@@ -44,7 +44,7 @@ import avatar from '../assets/avatar.png';
         <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">Hey!</h3>
         <p class="text-xl">
             I'm René, a passionate Full-Stack Web Developer with a knack for creating dynamic and user-friendly web applications. My time as
-            a freelancer in audio engineering gives me unique insights on how best to tailor to customers and my passion in development
+            a freelancer as an audiodesigner gives me unique insights on how best to tailor to customers and my passion in development
             pushes me further on my journey to be the developer I want to be. My strengths lie particularly in TypeScript and React.js for
             the frontend as well as Express.js and .NET for backend solutions. I always enjoy to engage with the full breadth of web
             development and strive to understand not only one but all aspects of an application in its fullest.
@@ -79,12 +79,12 @@ import avatar from '../assets/avatar.png';
             <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">TypeScript & JavaScript</span>,
             <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">React.js</span>,
             <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Next.js</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Astro.js</span>,
             <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Node.js</span>,
             <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">REST-API</span>,
             <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Express.js</span>,
             <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Git</span>,
-            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">HTML 5</span>,
-            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">CSS 3</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">HTML 5 & CSS 3</span>,
             <span class="text-3xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Tailwind CSS</span>,
             <span class="text-2xl font-bold hover:text-blue-900 duration-300 cursor-pointer">SQL & NoSQL</span>,
             <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">C#</span>,
@@ -96,21 +96,35 @@ import avatar from '../assets/avatar.png';
     </section>
 
     <section id="work" class="max-w-4xl w-full flex flex-col gap-6">
-        <section class="flex flex-col gap-4">
+        <section class="flex flex-col gap-8">
             <header>
-                <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
-                    <li class="bg-blue-950 p-2">Work</li>
-                    <li class="bg-blue-950 p-2"><span class="text-yellow-300">Intern IT</span> DocMorris</li>
-                </ul>
-                <p class="text-lg"><i>February 2025 to April 2025</i></p>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Work</li>
+                        <li class="bg-blue-950 p-2"><span class="text-yellow-300">Intern IT</span> DocMorris</li>
+                    </ul>
+                    <p class="text-lg"><i>February 2025 to April 2025</i></p>
+                </h3>
             </header>
 
-            <main>
-                <p class="text-xl">This is some lorem ipsum for you</p>
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    I had the opportuntity to work alongside leading experts from the online ecommece apothecary, developing web solutions
+                    under the guidance of an amazing team. Health in once click, by digitalizing the patient. With each new project I joined
+                    a new department, learning new and exciting things and further developed my understanding of Full-Stack Development.
+                </p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="list-disc list-inside flex flex-col text-xl">
+                    <li>Redesigning components for and advancing the white-label solution for their Zendesk.</li>
+                    <li>Researching and implementing new solutions for their advertisement system on their website</li>
+                    <li>Creating newly designed components for popups and banners using their figma design system</li>
+                    <li>Creating a tableau dashboard to track sales generated by search engines</li>
+                </ul>
             </main>
 
             <footer>
-                <ul class="text-lg list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
                     <li class="list-none font-semibold">Skills:</li>
                     <li>TypeScript</li>
                     <li>React.js</li>
@@ -122,33 +136,131 @@ import avatar from '../assets/avatar.png';
                     <li>GitLab</li>
                     <li>Figma</li>
                     <li>PostgreSQL</li>
-                    <li>Tableau</li>
+                    <li>Tableau & Tableau Server</li>
+                    <li>Zendesk</li>
+                    <li>AB-Tasty</li>
                 </ul>
             </footer>
         </section>
 
-        <section>
+        <section class="flex flex-col gap-8">
             <header>
                 <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
                     <li class="bg-blue-950 p-2">Work</li>
-                    <li class="bg-blue-950 p-2"><span class="text-yellow-300">Audio-Engineer</span> Freelancer</li>
+                    <li class="bg-blue-950 p-2"><span class="text-yellow-300">Audiodesigner</span> Freelancer</li>
                 </ul>
-                <p class="text-lg"><i>February 2025 to April 2025</i></p>
+                <p class="text-lg"><i>January 2011 to November 2019</i></p>
             </header>
 
-            <main>
-                <p class="text-xl"></p>
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    Helping brands stand out with high quality audio advertisement in radio and video media using newest digital audio
+                    technology and voiceover.
+                </p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="list-disc list-inside flex flex-col text-xl">
+                    <li>Conceptualizing and running radio shows and their unique audiodesign</li>
+                    <li>Creating and maintaining a digital audio library for customers</li>
+                    <li>Developing high quality audio voiceover on demand</li>
+                    <li>Mentoring and onboarding colleagues to projects</li>
+                </ul>
             </main>
+
+            <footer>
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Pro Tools</li>
+                    <li>Adobe Audition</li>
+                    <li>Adobe Premiere Pro</li>
+                    <li>Adobe After Effects</li>
+                    <li>Sound Design</li>
+                    <li>Audio Editing, Mixing & Mastering</li>
+                    <li>Voiceover</li>
+                    <li>Sound Effects</li>
+                    <li>Audio Advertisement Design</li>
+                </ul>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                    <li class="bg-blue-950 p-2">Work</li>
+                    <li class="bg-blue-950 p-2">
+                        <span class="text-yellow-300">Customer Support Agent</span>
+                    </li>
+                </ul>
+                <p class="text-lg"><i>June 2009 to December 2010</i></p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">Increased customer retention and sales with high qualit email and phone support for multiple brands.</p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="list-disc list-inside flex flex-col text-xl">
+                    <li>Telemarketing campaigns for local newspaper using behavioral patterns to increase sales.</li>
+                    <li>1st level support for various brands including but car insurances, mobile phone and pay-tv contracts</li>
+                </ul>
+            </main>
+
+            <footer>
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Customer Relations Management</li>
+                    <li>Customer Retention</li>
+                    <li>E-Mail Support</li>
+                    <li>Phone Support</li>
+                </ul>
+            </footer>
         </section>
     </section>
 
     <section id="projects" class="max-w-4xl w-full">
-        <h3 class="text-white text-2xl">My Projects</h3>
-    </section>
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Proj</li>
+                        <li class="bg-blue-950 p-2"><span class="text-yellow-300">Resume</span></li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>April 2024</i></p>
+            </header>
 
-    <style>
-        :root {
-            --list-image: url('../assets/checkmark.svg');
-        }
-    </style>
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    Delivering my resume build with web technologies, giving me an opportuntity to learn and showcase skills, thought and
+                    work processes.
+                </p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="list-disc list-inside flex flex-col text-xl">
+                    <li>
+                        Getting to know (
+                        <a class="duration-300 hover:underline hover:text-blue-500" href="https://astro.build/"> https://astro.build/ </a>
+                        )
+                    </li>
+                    <li>Using GitHub Pages to host the project</li>
+                    <li>Using Figma for design</li>
+                </ul>
+            </main>
+
+            <footer>
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Astro.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>HTML5</li>
+                    <li>GitHub Pages</li>
+                </ul>
+            </footer>
+        </section>
+
+        <style>
+            :root {
+                --list-image: url('../assets/checkmark.svg');
+            }
+        </style>
+    </section>
 </div>
