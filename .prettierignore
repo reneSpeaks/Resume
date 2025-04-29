@@ -1,0 +1,11 @@
+package*.json
+build
+coverage
+resources
+
+**/node_modules/*
+**/.vscode/*
+**/.idea/*
+**/.astro/*
+
+*.md

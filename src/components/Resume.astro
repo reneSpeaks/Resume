@@ -1,0 +1,153 @@
+---
+import avatar from '../assets/avatar.png';
+---
+
+<section id="header" class="flex flex-row items-center gap-4 bg-gray-200">
+    <img src={avatar.src} alt="Resume Image" class="h-48 w-auto" fetchpriority="high" />
+    <div id="header-content" class="w-full h-48 bg-blue-950 text-white flex flex-row items-center justify-between px-10">
+        <div id="header-title" class="flex flex-col">
+            <h1 class="text-4xl font-bold">René Weiberlenn</h1>
+            <h2 class="text-xl">Full-Stack Web Developer</h2>
+            <p>
+                <a href="mailto:rene.weiberlenn@live.de" class="text-blue-200 hover:text-blue-400 duration-300">rene.weiberlenn@live.de</a>
+            </p>
+        </div>
+        <div id="header-links" class="flex justify-end">
+            <a href="https://www.linkedin.com/in/rene-weiberlenn" target="_blank" class="text-xl text-blue-200 hover:text-blue-400">
+                LinkedIn
+            </a>
+        </div>
+    </div>
+</section>
+
+<div id="sections" class="flex flex-col w-full items-center justify-center gap-16 mt-16">
+    <section id="languages" class="max-w-4xl w-full">
+        <ul class="flex flex-row gap-6 text-white font-bold text-2xl">
+            <li class="bg-blue-950 p-2"><span class="text-yellow-300">German</span> native</li>
+            <li class="bg-blue-950 p-2"><span class="text-yellow-300">English</span> C2</li>
+        </ul>
+    </section>
+
+    <section id="introduction" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">I love creating!</h3>
+        <p class="text-xl">
+            I love creating web applications that are not only functional but also visually appealing. My passion drives me to keep working
+            on my skills to produce the bests product for any given situation and I love figuring out the intrecacies to make not only my
+            work but also the work of those around me easier and more efficient. Sharing my experience and benefitting from the experience
+            of others is what I love most about working in a team. I am always looking for new challenges and opportunities to grow as a
+            developer.
+        </p>
+    </section>
+
+    <section id="about" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">Hey!</h3>
+        <p class="text-xl">
+            I'm René, a passionate Full-Stack Web Developer with a knack for creating dynamic and user-friendly web applications. My time as
+            a freelancer in audio engineering gives me unique insights on how best to tailor to customers and my passion in development
+            pushes me further on my journey to be the developer I want to be. My strengths lie particularly in TypeScript and React.js for
+            the frontend as well as Express.js and .NET for backend solutions. I always enjoy to engage with the full breadth of web
+            development and strive to understand not only one but all aspects of an application in its fullest.
+        </p>
+        <p class="text-xl">
+            Beyond coding, I enjoy creative challenges that push me to think outside the box and hone my attention to detail. I love to
+            learn and grow and as such I am always on the lookout for new things to improve my understanding of this fast moving, exiting
+            world of development.
+        </p>
+    </section>
+
+    <section id="principles" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">My Princples</h3>
+        <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+            <li>Communicate respectfully and transparently</li>
+            <li>Have a requirements focused architectural and development process</li>
+            <li>
+                Achieve good and maintainable code, based on the architecture, automated testing and the concept of polite code (
+                <a class="hover:text-blue-900 hover:underline duration-300" href="https://youtu.be/7EmboKQH8lM?t=3160">
+                    https://youtu.be/7EmboKQH8lM?t=3160
+                </a>
+                )
+            </li>
+            <li>Be open to new ideas and approaches</li>
+            <li>Share knowledge within your team and beyond</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">My Skills</h3>
+        <p>
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">TypeScript & JavaScript</span>,
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">React.js</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Next.js</span>,
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Node.js</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">REST-API</span>,
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Express.js</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Git</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">HTML 5</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">CSS 3</span>,
+            <span class="text-3xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Tailwind CSS</span>,
+            <span class="text-2xl font-bold hover:text-blue-900 duration-300 cursor-pointer">SQL & NoSQL</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">C#</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">.NET</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">ASP.NET</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Jest</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">React Testing Library</span>
+        </p>
+    </section>
+
+    <section id="work" class="max-w-4xl w-full flex flex-col gap-6">
+        <section class="flex flex-col gap-4">
+            <header>
+                <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                    <li class="bg-blue-950 p-2">Work</li>
+                    <li class="bg-blue-950 p-2"><span class="text-yellow-300">Intern IT</span> DocMorris</li>
+                </ul>
+                <p class="text-lg"><i>February 2025 to April 2025</i></p>
+            </header>
+
+            <main>
+                <p class="text-xl">This is some lorem ipsum for you</p>
+            </main>
+
+            <footer>
+                <ul class="text-lg list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>TypeScript</li>
+                    <li>React.js</li>
+                    <li>Next.js</li>
+                    <li>Jest</li>
+                    <li>React Testing Library</li>
+                    <li>REST-API</li>
+                    <li>Tailwind CSS</li>
+                    <li>GitLab</li>
+                    <li>Figma</li>
+                    <li>PostgreSQL</li>
+                    <li>Tableau</li>
+                </ul>
+            </footer>
+        </section>
+
+        <section>
+            <header>
+                <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                    <li class="bg-blue-950 p-2">Work</li>
+                    <li class="bg-blue-950 p-2"><span class="text-yellow-300">Audio-Engineer</span> Freelancer</li>
+                </ul>
+                <p class="text-lg"><i>February 2025 to April 2025</i></p>
+            </header>
+
+            <main>
+                <p class="text-xl"></p>
+            </main>
+        </section>
+    </section>
+
+    <section id="projects" class="max-w-4xl w-full">
+        <h3 class="text-white text-2xl"></h3>
+    </section>
+
+    <style>
+        :root {
+            --list-image: url('../assets/checkmark.svg');
+        }
+    </style>
+</div>
