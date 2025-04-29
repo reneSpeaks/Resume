@@ -4,8 +4,12 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://renespeaks.github.io/resume',
-    base: '',
+    build: {
+        assetsPrefix: './'
+    },
+    site: 'https://renespeaks.github.io',
+    base: '/resume',
+    trailingSlash: 'never',
     vite: {
         plugins: [tailwindcss()]
     }
