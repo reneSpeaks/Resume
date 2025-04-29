@@ -95,7 +95,7 @@ import avatar from '../assets/avatar.png';
         </p>
     </section>
 
-    <section id="work" class="max-w-4xl w-full flex flex-col gap-6">
+    <section id="work" class="max-w-4xl w-full flex flex-col gap-20">
         <section class="flex flex-col gap-8">
             <header>
                 <h3>
@@ -216,7 +216,53 @@ import avatar from '../assets/avatar.png';
         </section>
     </section>
 
-    <section id="projects" class="max-w-4xl w-full">
+    <section id="projects" class="max-w-4xl w-full flex flex-col gap-20">
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Proj</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300"><a href="https://musikleben.live">musikleben.live</a></span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>December 2024 to Present</i></p>
+            </header>
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    Your music, your events, Live in Lu. Conceptualizing, development and deployment of a web solution for a local
+                    non-profit event organizer as the final project for the web-development bootcamp WBS CODING SCHOOL.
+                </p>
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="list-disc list-inside flex flex-col text-xl">
+                    <li>Conceptualizing the design in Figma creating a reusable design system</li>
+                    <li>Creating a fully responsive web application using React.js and Tailwind CSS</li>
+                    <li>Using Express.js & PostgreSQL for the backend REST-API</li>
+                    <li>Hosting the application on a Windows Server using IIS</li>
+                </ul>
+            </main>
+            <footer class="flex flex-col gap-6">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>TypeScript & JavaScript</li>
+                    <li>React.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>Figma</li>
+                    <li>REST-API</li>
+                    <li>Express.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Node.js</li>
+                    <li>Internet Information Services (IIS) Hosting</li>
+                </ul>
+
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://musikleben.live" target="_blank">→ Project</a>
+                </button>
+            </footer>
+        </section>
+
         <section class="flex flex-col gap-8">
             <header>
                 <h3>
@@ -246,7 +292,7 @@ import avatar from '../assets/avatar.png';
                 </ul>
             </main>
 
-            <footer>
+            <footer class="flex flex-col gap-6">
                 <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
                     <li class="list-none font-semibold">Skills:</li>
                     <li>Astro.js</li>
@@ -254,6 +300,11 @@ import avatar from '../assets/avatar.png';
                     <li>HTML5</li>
                     <li>GitHub Pages</li>
                 </ul>
+
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://github.com/reneSpeaks/Resume" target="_blank">→ Project</a>
+                </button>
             </footer>
         </section>
 
