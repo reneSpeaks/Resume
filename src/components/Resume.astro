@@ -1,9 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 import avatar from '../assets/avatar.png';
 ---
 
 <section id="header" class="flex flex-row items-center gap-4 bg-gray-200">
-    <img src={avatar.src} alt="Resume Image" class="h-48 w-auto" fetchpriority="high" />
+    <Image src={avatar} alt="Resume Avatar" class="h-48 w-auto" loading="eager" />
     <div id="header-content" class="w-full h-48 bg-blue-950 text-white flex flex-row items-center justify-between px-10">
         <div id="header-title" class="flex flex-col">
             <h1 class="text-4xl font-bold">René Weiberlenn</h1>
@@ -142,7 +143,7 @@ import avatar from '../assets/avatar.png';
     </section>
 
     <section id="projects" class="max-w-4xl w-full">
-        <h3 class="text-white text-2xl"></h3>
+        <h3 class="text-white text-2xl">My Projects</h3>
     </section>
 
     <style>
