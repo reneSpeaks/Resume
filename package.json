@@ -11,7 +11,13 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,astro,css,scss,sass}": [
+      "npm run prettier"
+    ]
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
@@ -19,6 +25,8 @@
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "0.6.11"
