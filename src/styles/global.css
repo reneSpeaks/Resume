@@ -1,1 +1,5 @@
 @import 'tailwindcss';
+
+:root {
+    --list-image: url('../assets/checkmark.svg');
+}

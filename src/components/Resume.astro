@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import avatar from '../assets/avatar.png';
+import certificate from '../assets/cerficiate_Rene_Weiberlenn.pdf';
 ---
 
 <section id="header" class="flex flex-row items-center gap-4 bg-gray-200">
@@ -115,7 +116,7 @@ import avatar from '../assets/avatar.png';
                 </p>
 
                 <h4 class="font-bold text-xl">Highlights</h4>
-                <ul class="list-disc list-inside flex flex-col text-xl">
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
                     <li>Redesigning components for and advancing the white-label solution for their Zendesk.</li>
                     <li>Researching and implementing new solutions for their advertisement system on their website</li>
                     <li>Creating newly designed components for popups and banners using their figma design system</li>
@@ -159,7 +160,7 @@ import avatar from '../assets/avatar.png';
                 </p>
 
                 <h4 class="font-bold text-xl">Highlights</h4>
-                <ul class="list-disc list-inside flex flex-col text-xl">
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
                     <li>Conceptualizing and running radio shows and their unique audiodesign</li>
                     <li>Creating and maintaining a digital audio library for customers</li>
                     <li>Developing high quality audio voiceover on demand</li>
@@ -198,7 +199,7 @@ import avatar from '../assets/avatar.png';
                 <p class="text-xl">Increased customer retention and sales with high qualit email and phone support for multiple brands.</p>
 
                 <h4 class="font-bold text-xl">Highlights</h4>
-                <ul class="list-disc list-inside flex flex-col text-xl">
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
                     <li>Telemarketing campaigns for local newspaper using behavioral patterns to increase sales.</li>
                     <li>1st level support for various brands including but car insurances, mobile phone and pay-tv contracts</li>
                 </ul>
@@ -235,7 +236,7 @@ import avatar from '../assets/avatar.png';
                     non-profit event organizer as the final project for the web-development bootcamp WBS CODING SCHOOL.
                 </p>
                 <h4 class="font-bold text-xl">Highlights</h4>
-                <ul class="list-disc list-inside flex flex-col text-xl">
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
                     <li>Conceptualizing the design in Figma creating a reusable design system</li>
                     <li>Creating a fully responsive web application using React.js and Tailwind CSS</li>
                     <li>Using Express.js & PostgreSQL for the backend REST-API</li>
@@ -281,7 +282,7 @@ import avatar from '../assets/avatar.png';
                 </p>
 
                 <h4 class="font-bold text-xl">Highlights</h4>
-                <ul class="list-disc list-inside flex flex-col text-xl">
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
                     <li>
                         Getting to know (
                         <a class="duration-300 hover:underline hover:text-blue-500" href="https://astro.build/"> https://astro.build/ </a>
@@ -307,11 +308,27 @@ import avatar from '../assets/avatar.png';
                 </button>
             </footer>
         </section>
+    </section>
 
-        <style>
-            :root {
-                --list-image: url('../assets/checkmark.svg');
-            }
-        </style>
+    <section id="education" class="max-w-4xl w-full flex flex-col gap-20">
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Cer</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300">Full-Stack Web & App Development</span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>September 2024 to January 2025</i> @ WBS CODING SCHOOL</p>
+            </header>
+            <footer>
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href={certificate} target="_blank">→ Credential</a>
+                </button>
+            </footer>
+        </section>
     </section>
 </div>
