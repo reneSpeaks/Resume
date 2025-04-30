@@ -5,20 +5,22 @@ import avatar from '../assets/avatar.png';
 
 <section id="header" class="flex flex-row items-center gap-4 bg-gray-200">
     <Image src={avatar} alt="Resume Avatar" class="h-48 w-auto" loading="eager" />
-    <div id="header-content" class="w-full h-48 bg-blue-950 text-white flex flex-row items-center justify-between px-10">
+    <div id="header-content" class="w-full h-48 bg-blue-950 text-white flex flex-row items-center justify-between px-8 md:px-10">
         <div id="header-title" class="flex flex-col">
-            <h1 class="text-4xl font-bold">René Weiberlenn</h1>
-            <h2 class="text-xl">Full-Stack Web Developer</h2>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">René Weiberlenn</h1>
+            <h2 class="sm:text-lg md:text-xl">Full-Stack Web Developer</h2>
             <p>
-                <a href="mailto:rene.weiberlenn@live.de" class="text-blue-200 hover:text-blue-400 duration-300">rene.weiberlenn@live.de</a>
+                <a
+                    href="mailto:rene.weiberlenn@live.de"
+                    class="text-xs xs:text-sm sm:text-lg text-blue-200 hover:text-blue-400 duration-300">rene.weiberlenn@live.de</a
+                >
             </p>
         </div>
-        <div id="header-links" class="flex justify-end">
-            <a href="https://www.linkedin.com/in/rene-weiberlenn" target="_blank" class="text-xl text-blue-200 hover:text-blue-400">
-                LinkedIn
-            </a>
-        </div>
     </div>
+</section>
+
+<section id="header-links" class="flex flex-row justify-end p-4">
+    <a href="https://www.linkedin.com/in/rene-weiberlenn" target="_blank" class="text-xl text-blue-950 hover:text-blue-400"> LinkedIn </a>
 </section>
 
 <div id="sections" class="flex flex-col w-full items-center justify-center gap-16 my-16 p-4">
