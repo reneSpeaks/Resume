@@ -1,6 +1,6 @@
 # Resume of René Weiberlenn
 Stores an up to date version of my resume.
-Find the deployed version **[here](https://renespeaks.github.io/resume)**
+Find the deployed version **[here](https://renespeaks.github.io/Resume)**
 
 Made in a few days with [Tailwind](https://tailwindcss.com/) as an improvement for faster CSS coding and [Astro](https://astro.build/) for good performance (packs with [Vite](https://vitejs.dev/)) and comfortable web development.
 
