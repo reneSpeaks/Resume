@@ -8,7 +8,7 @@ export default defineConfig({
         assetsPrefix: './'
     },
     site: 'https://renespeaks.github.io',
-    base: '/resume',
+    base: '/Resume',
     trailingSlash: 'never',
     vite: {
         plugins: [tailwindcss()]
