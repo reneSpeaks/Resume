@@ -1,1 +1,12 @@
-npx lint-staged
+echo '🕦 Linting your changes before committing'
+echo 'this may take a while, please be patient.'
+
+# Check ESLint Standards
+npx lint-staged ||
+(
+     echo '❌ You have issue in your code, please check linter.'
+     echo 'Run npm run lint, make changes and try committing again.';
+     false;
+)
+
+echo '✅ No errors found: committing this now.... 🚀'
