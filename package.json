@@ -4,7 +4,7 @@
   "private": true,
   "description": "My Resume",
   "author": "René Weiberlenn",
-  "homepage": "https://renespeaks.github.io/resume/",
+  "homepage": "https://reneSpeaks.github.io/Resume/",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -28,7 +28,8 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "astro": "^5.7.8",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.1.4",
+    "zod": "^3.24.4"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.31.1",
@@ -40,7 +41,7 @@
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "typescript-eslint": "^8.31.1"
+    "typescript": "^5.8.3"
   },
   "packageManager": "npm@11.3.0"
 }

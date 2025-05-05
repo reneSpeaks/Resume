@@ -1,5 +1,27 @@
 {
     "extends": "astro/tsconfigs/strict",
+    "compilerOptions": {
+        // Enabled for zod (https://www.npmjs.com/package/zod#user-content-requirements)
+        "strict": true,
+        // Enable node-style module resolution, for things like npm package imports.
+        "moduleResolution": "node",
+        // Enable JSON imports.
+        "resolveJsonModule": true,
+        // Add type definitions for our Astro runtime.
+        "baseUrl": "./src",
+        "paths": {
+            "@components/*": ["components/*"],
+            "@layouts/*": ["layouts/*"],
+            "@pages/*": ["pages/*"],
+            "@root/*": ["../*"],
+            "@schemas/*": ["schemas/*"],
+            "@assets/*": ["assets/*"],
+            "@styles/*": ["styles/*"]
+        },
+        "types": ["astro/client"],
+        // Skip type checking of declaration files
+        "skipLibCheck": true
+    },
     "include": [".astro/types.d.ts", "**/*"],
-    "exclude": ["dist"]
+    "exclude": ["dist, node_modules"]
 }
