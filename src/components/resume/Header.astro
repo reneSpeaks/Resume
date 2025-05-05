@@ -1,0 +1,48 @@
+---
+export interface Props {
+    name: string;
+    label: string;
+    image?: string;
+    email?: string;
+    profiles?: Profile[];
+    url?: string;
+}
+
+type Profile = {
+    network: string;
+    url: string;
+};
+
+const { name, label, image, email, profiles = [], url } = Astro.props as Props;
+---
+
+<section id="header" class="flex flex-row items-center gap-4 bg-gray-200">
+    <img src={image} alt="Resume Avatar" class="h-48 w-auto" loading="eager" />
+    <div id="header-content" class="w-full h-48 bg-blue-950 text-white flex flex-row items-center justify-between px-8 md:px-10">
+        <div id="header-title" class="flex flex-col">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">{name}</h1>
+            <h2 class="sm:text-lg md:text-xl">{label}</h2>
+            <p>
+                <a href={'mailto:' + email} class="text-xs xs:text-sm sm:text-lg text-blue-200 hover:text-blue-400 duration-300">{email}</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="header-links" class="flex flex-col h-auto w-full p-4">
+    {
+        profiles.map(({ network, url }) => (
+            <a href={url} target="_blank" class="text-xl w-fit text-blue-950 hover:text-blue-400 self-end">
+                {network}
+            </a>
+        ))
+    }
+
+    {
+        url && (
+            <a href={url} target="_blank" class="text-xl w-fit text-blue-950 hover:text-blue-400 self-end">
+                Website
+            </a>
+        )
+    }
+</section>

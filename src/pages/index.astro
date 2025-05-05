@@ -1,14 +1,13 @@
 ---
 import * as resumeJson from '@root/resume.json';
-import { resumeSchema } from '@schemas/Resume';
-import Resume from '@components/Resume.astro';
+import Resume from '@components/resume/Resume.astro';
 import Layout from '@layouts/Layout.astro';
-
+import { resumeSchema } from '@schemas/Resume';
 import '@styles/global.css';
 
 const resume = resumeSchema.parse(resumeJson);
 ---
 
 <Layout title={resume.basics.name}>
-    <Resume />
+    <Resume {...resume} />
 </Layout>

@@ -1,13 +1,18 @@
 {
-    "extends": "astro/tsconfigs/strict",
     "compilerOptions": {
         // Enabled for zod (https://www.npmjs.com/package/zod#user-content-requirements)
         "strict": true,
+        // Enable top-level await, and other modern ESM features.
+        "target": "ESNext",
+        "module": "ESNext",
         // Enable node-style module resolution, for things like npm package imports.
         "moduleResolution": "node",
         // Enable JSON imports.
         "resolveJsonModule": true,
+        // Enable stricter transpilation for better output.
+        "isolatedModules": true,
         // Add type definitions for our Astro runtime.
+        "types": ["astro/client"],
         "baseUrl": "./src",
         "paths": {
             "@components/*": ["components/*"],
@@ -15,13 +20,12 @@
             "@pages/*": ["pages/*"],
             "@root/*": ["../*"],
             "@schemas/*": ["schemas/*"],
-            "@assets/*": ["assets/*"],
-            "@styles/*": ["styles/*"]
+            "@styles/*": ["styles/*"],
+            "@assets/*": ["assets/*"]
         },
-        "types": ["astro/client"],
         // Skip type checking of declaration files
         "skipLibCheck": true
     },
-    "include": [".astro/types.d.ts", "**/*"],
-    "exclude": ["dist, node_modules"]
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
 }

@@ -5,7 +5,7 @@ const profileSchema = z.object({
     url: z.string().url()
 });
 
-export type Proifle = z.infer<typeof profileSchema>;
+export type Profile = z.infer<typeof profileSchema>;
 
 const summaryObjectSchema = z.object({
     title: z.string(),
@@ -25,8 +25,9 @@ export function isSummaryObject(summary: Summary): summary is SummaryObject {
 const basicsSchema = z.object({
     name: z.string(),
     label: z.string(),
-    summary: z.array(summarySchema),
+    summary: summarySchema.or(z.array(summarySchema)),
     image: z.optional(z.string()),
+    email: z.optional(z.string().email()),
     url: z.optional(z.string().url()),
     profiles: z.optional(z.array(profileSchema))
 });

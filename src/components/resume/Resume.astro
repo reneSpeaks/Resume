@@ -1,0 +1,529 @@
+---
+import { Image } from 'astro:assets';
+import avatar from '@assets/avatar.png';
+
+import Header from '@components/resume/Header.astro';
+import { Resume } from '@schemas/Resume';
+
+export type Props = Resume;
+const {
+    basics: { summary, ...basics },
+    certificates,
+    education,
+    languages,
+    projects,
+    skills,
+    work
+} = Astro.props as Props;
+
+const summaries = Array.isArray(summary) ? summary : [summary];
+---
+
+<main>
+    <Header {...basics} />
+</main>
+
+<div id="sections" class="flex flex-col w-full items-center justify-center gap-16 mb-16 p-4">
+    <section id="languages" class="max-w-4xl w-full">
+        <ul class="flex flex-row gap-6 text-white font-bold text-2xl">
+            <li class="bg-blue-950 p-2"><span class="text-yellow-300">German</span> native</li>
+            <li class="bg-blue-950 p-2"><span class="text-yellow-300">English</span> C2</li>
+        </ul>
+    </section>
+
+    <section id="introduction" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">I love creating!</h3>
+        <p class="text-xl">
+            I love creating web applications that are not only functional but also visually appealing. My passion drives me to keep working
+            on my skills to produce the bests product for any given situation and I love figuring out the intrecacies of new technology to
+            make not only my work but also the work of those around me easier and more efficient. Sharing my experience and benefitting from
+            the experience of others is what I love most about working in a development team. I am always looking for new challenges and
+            opportunities to grow as a developer.
+        </p>
+    </section>
+
+    <section id="about" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">Hey!</h3>
+        <p class="text-xl">
+            I'm René, a passionate Full-Stack Web Developer with a knack for creating dynamic and user-friendly web applications. My time as
+            a freelancer as an audiodesigner gives me unique insights on how best to tailor to customers and my passion in development
+            pushes me further on my journey to be the developer I want to be. My strengths lie particularly in TypeScript and React.js for
+            the frontend as well as Express.js and .NET for backend solutions. I always enjoy to engage with the full breadth of web
+            development and strive to understand not only one but all aspects of an application in its fullest.
+        </p>
+        <p class="text-xl">
+            Beyond coding, I enjoy creative challenges that push me to think outside the box and hone my attention to detail. I love to
+            learn and grow and as such I am always on the lookout for new things to improve my understanding of this fast moving, exciting
+            world of development.
+        </p>
+    </section>
+
+    <section id="principles" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">My Princples</h3>
+        <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+            <li>Communicate respectfully and transparently</li>
+            <li>Have a requirements focused architectural and development process</li>
+            <li>
+                Achieve good and maintainable code, based on the architecture, automated testing and the concept of polite code (
+                <a class="hover:text-blue-900 hover:underline duration-300" href="https://youtu.be/7EmboKQH8lM?t=3160">
+                    https://youtu.be/7EmboKQH8lM?t=3160
+                </a>
+                )
+            </li>
+            <li>Be open to new ideas and approaches</li>
+            <li>Share knowledge within your team and beyond</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="max-w-4xl w-full flex flex-col gap-6">
+        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">My Skills</h3>
+        <p>
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">TypeScript & JavaScript</span>,
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">React.js</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Next.js</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Astro.js</span>,
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Node.js</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">REST-API</span>,
+            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Express.js</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Git</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">HTML 5 & CSS 3</span>,
+            <span class="text-3xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Tailwind CSS</span>,
+            <span class="text-2xl font-bold hover:text-blue-900 duration-300 cursor-pointer">SQL & NoSQL</span>,
+            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">C#</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">.NET</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">ASP.NET</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Jest</span>,
+            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">React Testing Library</span>
+        </p>
+    </section>
+
+    <section id="work" class="max-w-4xl w-full flex flex-col gap-20">
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Work</li>
+                        <li class="bg-blue-950 p-2"><span class="text-yellow-300">Intern IT</span> DocMorris</li>
+                    </ul>
+                    <p class="text-lg"><i>February 2025 to April 2025</i></p>
+                </h3>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    I had the amazing opportuntity to work alongside leading experts from the online ecommece apothecary, developing web
+                    solutions under the guidance of an amazing team. Health in once click, by digitalizing the patient. With each new
+                    project I joined a new department, learning new and exciting things to further develop my understanding of Full-Stack
+                    Development.
+                </p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+                    <li>Redesigning components and advancing the white-label solution for their Zendesk.</li>
+                    <li>Researching and implementing new solutions for their advertisement system on their website</li>
+                    <li>Creating newly designed components for popups and banners using their figma design system</li>
+                    <li>Creating a tableau dashboard to track sales generated by search engines</li>
+                </ul>
+            </main>
+
+            <footer>
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>TypeScript</li>
+                    <li>React.js</li>
+                    <li>Next.js</li>
+                    <li>Jest</li>
+                    <li>React Testing Library</li>
+                    <li>REST-API</li>
+                    <li>Tailwind CSS</li>
+                    <li>GitLab</li>
+                    <li>Figma</li>
+                    <li>PostgreSQL</li>
+                    <li>Tableau & Tableau Server</li>
+                    <li>Zendesk</li>
+                    <li>AB-Tasty</li>
+                </ul>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                    <li class="bg-blue-950 p-2">Work</li>
+                    <li class="bg-blue-950 p-2"><span class="text-yellow-300">Audiodesigner</span> Freelancer</li>
+                </ul>
+                <p class="text-lg"><i>January 2011 to November 2019</i></p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    Helping brands stand out with high quality audio advertisement in radio and video media using newest digital audio
+                    technology and voiceover.
+                </p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+                    <li>Conceptualizing and running radio and podcast shows and their unique need for audiodesign</li>
+                    <li>Creating and maintaining a digital audio library for customers</li>
+                    <li>Developing high quality audio voiceover on demand</li>
+                    <li>Mentoring and onboarding colleagues to projects</li>
+                </ul>
+            </main>
+
+            <footer>
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Pro Tools</li>
+                    <li>Adobe Audition</li>
+                    <li>Adobe Premiere Pro</li>
+                    <li>Adobe After Effects</li>
+                    <li>Sound Design</li>
+                    <li>Audio Editing, Mixing & Mastering</li>
+                    <li>Voiceover</li>
+                    <li>Sound Effects</li>
+                    <li>Audio Advertisement Design</li>
+                </ul>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                    <li class="bg-blue-950 p-2">Work</li>
+                    <li class="bg-blue-950 p-2">
+                        <span class="text-yellow-300">Customer Support Agent</span>
+                    </li>
+                </ul>
+                <p class="text-lg"><i>June 2009 to December 2010</i></p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">Increased customer retention and sales with high quality email and phone support for multiple brands.</p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+                    <li>Telemarketing campaigns for local newspaper using behavioral patterns to increase sales.</li>
+                    <li>1st level support for various brands including a car insurance as well as mobile phone and pay-tv contracts</li>
+                </ul>
+            </main>
+
+            <footer>
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Customer Relations Management</li>
+                    <li>Customer Retention</li>
+                    <li>E-Mail Support</li>
+                    <li>Phone Support</li>
+                </ul>
+            </footer>
+        </section>
+    </section>
+
+    <section id="projects" class="max-w-4xl w-full flex flex-col gap-20">
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Proj</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300"><a href="https://musikleben.live">musikleben.live</a></span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>December 2024 to Present</i></p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    Your music, your events, Live in Lu. Conceptualizing, development and deployment of a web solution for a local
+                    non-profit event organizer as the final project for the web development bootcamp @ WBS CODING SCHOOL.
+                </p>
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+                    <li>Conceptualizing the design in Figma creating a reusable design system</li>
+                    <li>Creating a fully responsive web application using React.js and Tailwind CSS</li>
+                    <li>Using Express.js & PostgreSQL for the backend REST-API</li>
+                    <li>Hosting the application on a Windows Server using IIS</li>
+                    <li>Live support for the project and its customer</li>
+                </ul>
+            </main>
+
+            <footer class="flex flex-col gap-6">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>TypeScript & JavaScript</li>
+                    <li>React.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>Figma</li>
+                    <li>REST-API</li>
+                    <li>Express.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Node.js</li>
+                    <li>Internet Information Services (IIS) Hosting</li>
+                </ul>
+
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://musikleben.live" target="_blank">→ Project</a>
+                </button>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Proj</li>
+                        <li class="bg-blue-950 p-2"><span class="text-yellow-300">Resume</span></li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>April 2024</i></p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    Delivering my resume build with new web technologies, giving me an opportuntity to learn and showcase skills, thought
+                    and work processes.
+                </p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+                    <li>
+                        Getting to know (
+                        <a class="duration-300 hover:underline hover:text-blue-500" href="https://astro.build/"> https://astro.build/ </a>
+                        )
+                    </li>
+                    <li>Using GitHub Pages to host the project</li>
+                    <li>Using Figma for design</li>
+                </ul>
+            </main>
+
+            <footer class="flex flex-col gap-6">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Astro.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>HTML5</li>
+                    <li>GitHub Pages</li>
+                </ul>
+
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://github.com/reneSpeaks/Resume" target="_blank">→ Project</a>
+                </button>
+            </footer>
+        </section>
+    </section>
+
+    <section id="education" class="max-w-4xl w-full flex flex-col gap-20">
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Edu</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300">Full-Stack Web & App Development</span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>September 2024 to January 2025</i> @ WBS CODING SCHOOL</p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    I turned my ambition into skills, using WBS COODING SCHOOL as a stepping stone to change my career. In 17 Weeks (680
+                    Hours), I gained a fundamental understanding of Web & App Development at the bootcamp. Their instructors led me through
+                    a cutting-edge curriculum and taught not only the skills I need to succeed but also the principles a developer should
+                    follow to survive in the fast-paced world of development.
+                </p>
+            </main>
+
+            <footer class="flex flex-col gap-6">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Web Development</li>
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>JavaScript</li>
+                    <li>MongoDB</li>
+                    <li>PostgreSQL</li>
+                    <li>REST-API</li>
+                    <li>Vite</li>
+                    <li>Parcel</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Tailwind CSS</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>UX/UI Fundamentals</li>
+                    <li>SEO</li>
+                    <li>Figma</li>
+                    <li>Trello</li>
+                    <li>Agile Software Development</li>
+                    <li>Functional Programming</li>
+                </ul>
+
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://musikleben.live/documents/certificate_Rene_Weiberlenn.pdf" target="_blank">→ Credential</a>
+                </button>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Edu</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300">IT Betriebswirt (IU)</span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>October 2022 to January 2024</i> @ IU International Hochschule Berlin</p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    In an effort to deepen my understanding of business processes and their relation to IT, I enrolled in the IT
+                    Betribeswirt (IU) programm at IU Inernational University Berlin. This program is designed to provide a comprehensive
+                    understanding of the intersection between IT and business, equipping me with the skills needed to excel in this dynamic
+                    field. The curriculum covers a wide range of topics, including project management, business informatics, and agile
+                    software development.
+                </p>
+            </main>
+
+            <footer class="flex flex-col gap-6">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Business Informatics</li>
+                    <li>Business Processes</li>
+                    <li>Project Management</li>
+                    <li>Agile Software Development</li>
+                    <li>Business Administration</li>
+                    <li>Accounting</li>
+                    <li>Financials</li>
+                </ul>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Edu</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300">IT-System-Kaufmann (IHK)</span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>September 2004 to January 2008</i> @ bbw Akademie Karlshorst</p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    I completed my apprenticeship as an IT-System-Kaufmann at the bbw Akademie Karlshorst. I learned the basics of IT and
+                    business processes, which gave me a solid foundation for my career. I learned how to work with customers and how to
+                    understand their needs and requirements.
+                </p>
+            </main>
+
+            <footer class="flex flex-col gap-6">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>Object Oriented Programming</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>MySQL</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Functional Programming</li>
+                    <li>Bookkeeping</li>
+                    <li>Financials</li>
+                    <li>Business Administration</li>
+                    <li>Accounting</li>
+                    <li>Business Processes</li>
+                    <li>Project Management</li>
+                    <li>Customer Management</li>
+                    <li>Business English</li>
+                </ul>
+
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://musikleben.live/documents/documents_Rene_Weiberlenn.pdf" target="_blank">→ Documents</a>
+                </button>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Cer</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300">Battle of the Bootcamps 2024</span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>November 2024</i> @ WBS CODING SCHOOL</p>
+            </header>
+
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">
+                    I participated and <u><strong>won</strong></u> the Battle of the Bootcamps 2024 Hackathon with my team from WBS CODING SCHOOL
+                    and Stack Fuel, where we participated for the theme: Innovative apps for Greener Offices. In 48 grueling hours we created
+                    a working prototype web application and convinced the jury from DocMorris and Delivery Hero that our entry was the best!
+                </p>
+                <p class="text-xl">Out of our team I was chosen to win the incredible opportunity for an internship at DocMorris!</p>
+
+                <h4 class="font-bold text-xl">Highlights</h4>
+                <ul class="text-xl pl-10 list-image-[var(--list-image)]">
+                    <li>Creating and designing a fully responsive web application using React.js and Tailwind CSS</li>
+                    <li>Python & FastAPI for the backend REST-API</li>
+                    <li>Training and implementing a working AI Bot for the Website based on the theme</li>
+                </ul>
+            </main>
+
+            <footer class="flex flex-col gap-6">
+                <ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+                    <li class="list-none font-semibold">Skills:</li>
+                    <li>React.js</li>
+                    <li>Vite</li>
+                    <li>Tailwind CSS</li>
+                    <li>FastAPI</li>
+                    <li>PostgreSQL</li>
+                    <li>Microsoft Copilot</li>
+                </ul>
+
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://eu.badgr.com/public/assertions/0rdsMjr6RgWslYYpdRR-mQ" target="_blank">→ Credential</a>
+                </button>
+            </footer>
+        </section>
+
+        <section class="flex flex-col gap-8">
+            <header>
+                <h3>
+                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+                        <li class="bg-blue-950 p-2">Cer</li>
+                        <li class="bg-blue-950 p-2">
+                            <span class="text-yellow-300">Foundational C# with Microsoft</span>
+                        </li>
+                    </ul>
+                </h3>
+                <p class="text-lg"><i>February 2024</i> @ freeCodeCamp</p>
+            </header>
+
+            <footer>
+                <button
+                    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+                    <a href="https://www.freecodecamp.org/certification/Pathing/foundational-c-sharp-with-microsoft" target="_blank">
+                        → Credential
+                    </a>
+                </button>
+            </footer>
+        </section>
+    </section>
+</div>
