@@ -1,0 +1,52 @@
+---
+import { Skill } from '@schemas/Resume';
+
+export type Props = { skills: Skill[]; sortedBy?: 'level' };
+const { skills, sortedBy } = Astro.props as Props;
+
+function compareLevel(a: Skill, b: Skill) {
+    const asNumber = {
+        beginner: 4,
+        intermediate: 3,
+        advanced: 2,
+        expert: 1
+    };
+
+    return asNumber[a.level] - asNumber[b.level];
+}
+
+const normalisedSkills = sortedBy === 'level' ? [...skills].sort(compareLevel) : skills;
+---
+
+<section id="skills" class="max-w-4xl w-full flex flex-col gap-6">
+    <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">My Skills</h3>
+    <p>
+        {
+            normalisedSkills.map(({ name, level }) => (
+                <>
+                    <span class={level}>{name}</span>,
+                </>
+            ))
+        }
+    </p>
+</section>
+
+<style>
+    @import 'tailwindcss';
+
+    .expert {
+        @apply cursor-pointer text-4xl font-bold duration-300 hover:text-blue-900;
+    }
+
+    .advanced {
+        @apply cursor-pointer text-3xl font-semibold duration-300 hover:text-blue-900;
+    }
+
+    .intermediate {
+        @apply cursor-pointer text-2xl font-medium duration-300 hover:text-blue-900;
+    }
+
+    .beginner {
+        @apply cursor-pointer text-xl font-normal duration-300 hover:text-blue-900;
+    }
+</style>

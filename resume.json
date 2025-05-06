@@ -27,5 +27,105 @@
                 "url": "https://www.linkedin.com/in/rene-weiberlenn/"
             }
         ]
-    }
+    },
+    "languages": [
+        {
+            "language": "German",
+            "fluency": "native"
+        },
+        {
+            "language": "English",
+            "fluency": "C"
+        }
+    ],
+    "skills": [
+        {
+            "name": "TypeScript",
+            "level": "expert"
+        },
+        {
+            "name": "JavaScript",
+            "level": "expert"
+        },
+        {
+            "name": "C#",
+            "level": "advanced"
+        },
+        {
+            "name": "SQL",
+            "level": "advanced"
+        },
+        {
+            "name": "HTML5",
+            "level": "expert"
+        },
+        {
+            "name": "CSS3",
+            "level": "advanced"
+        },
+        {
+            "name": "Tailwind CSS",
+            "level": "expert"
+        },
+        {
+            "name": "SCSS",
+            "level": "intermediate"
+        },
+        {
+            "name": "React.js",
+            "level": "expert"
+        },
+        {
+            "name": "Next.js",
+            "level": "advanced"
+        },
+        {
+            "name": "Astro.js",
+            "level": "intermediate"
+        },
+        {
+            "name": "Jest",
+            "level": "intermediate"
+        },
+        {
+            "name": "React Testing Library",
+            "level": "intermediate"
+        },
+        {
+            "name": "Node.js",
+            "level": "expert"
+        },
+        {
+            "name": "Express.js",
+            "level": "expert"
+        },
+        {
+            "name": ".NET",
+            "level": "intermediate"
+        },
+        {
+            "name": "ASP.NET",
+            "level": "intermediate"
+        },
+        {
+            "name": "REST API",
+            "level": "expert"
+        },
+        {
+            "name": "MongoDB",
+            "level": "advanced"
+        },
+        {
+            "name": "PostgreSQL",
+            "level": "advanced"
+        },
+        {
+            "name": "MySQL",
+            "level": "intermediate"
+        },
+        {
+            "name": "Git",
+            "level": "advanced"
+        }
+    ]
 }

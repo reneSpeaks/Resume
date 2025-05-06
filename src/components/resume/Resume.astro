@@ -1,5 +1,7 @@
 ---
 import Header from '@components/resume/Header.astro';
+import Languages from '@components/resume/Languages.astro';
+import Skills from '@components/resume/Skills.astro';
 import type { Resume } from '@schemas/Resume';
 
 export type Props = Resume;
@@ -21,12 +23,7 @@ const summaries = Array.isArray(summary) ? summary : [summary];
 </main>
 
 <div id="sections" class="flex flex-col w-full items-center justify-center gap-16 mb-16 p-4">
-    <section id="languages" class="max-w-4xl w-full">
-        <ul class="flex flex-row gap-6 text-white font-bold text-2xl">
-            <li class="bg-blue-950 p-2"><span class="text-yellow-300">German</span> native</li>
-            <li class="bg-blue-950 p-2"><span class="text-yellow-300">English</span> C2</li>
-        </ul>
-    </section>
+    {languages && <Languages languages={languages} />}
 
     <section id="introduction" class="max-w-4xl w-full flex flex-col gap-6">
         <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">I love creating!</h3>
@@ -72,27 +69,7 @@ const summaries = Array.isArray(summary) ? summary : [summary];
         </ul>
     </section>
 
-    <section id="skills" class="max-w-4xl w-full flex flex-col gap-6">
-        <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">My Skills</h3>
-        <p>
-            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">TypeScript & JavaScript</span>,
-            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">React.js</span>,
-            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Next.js</span>,
-            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Astro.js</span>,
-            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Node.js</span>,
-            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">REST-API</span>,
-            <span class="text-4xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Express.js</span>,
-            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Git</span>,
-            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">HTML 5 & CSS 3</span>,
-            <span class="text-3xl font-bold hover:text-blue-900 duration-300 cursor-pointer">Tailwind CSS</span>,
-            <span class="text-2xl font-bold hover:text-blue-900 duration-300 cursor-pointer">SQL & NoSQL</span>,
-            <span class="text-3xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">C#</span>,
-            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">.NET</span>,
-            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">ASP.NET</span>,
-            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">Jest</span>,
-            <span class="text-2xl font-semibold hover:text-blue-900 duration-300 cursor-pointer">React Testing Library</span>
-        </p>
-    </section>
+    {skills && <Skills skills={skills} />}
 
     <section id="work" class="max-w-4xl w-full flex flex-col gap-20">
         <section class="flex flex-col gap-8">
