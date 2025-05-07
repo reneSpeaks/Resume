@@ -36,7 +36,7 @@ export type Basics = z.infer<typeof basicsSchema>;
 
 const dateStringSchema = z
     .string()
-    .regex(/^(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}$/);
+    .regex(/^(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}$|^Present$/);
 
 const certificateSchema = z.object({
     name: z.string(),
@@ -61,17 +61,17 @@ export type Education = z.infer<typeof educationSchema>;
 
 const languageSchema = z.object({
     language: z.string(),
-    fluency: z.enum(['A', 'B', 'C', 'native'])
+    fluency: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'native'])
 });
 
 export type Language = z.infer<typeof languageSchema>;
 
 const projectSchema = z.object({
     name: z.string(),
-    description: z.string(),
-    highlights: z.optional(z.array(z.string())),
+    summary: z.string(),
     startDate: dateStringSchema,
     endDate: z.optional(dateStringSchema),
+    highlights: z.optional(z.array(z.string())),
     skills: z.optional(z.array(z.string())),
     url: z.optional(z.string().url())
 });
@@ -92,8 +92,6 @@ const workSchema = z.object({
     startDate: dateStringSchema,
     endDate: z.optional(dateStringSchema),
     highlights: z.optional(z.array(z.string())),
-    location: z.optional(z.string()),
-    projects: z.optional(z.array(z.string())),
     skills: z.optional(z.array(z.string())),
     url: z.optional(z.string().url())
 });

@@ -3,6 +3,7 @@ import Header from '@components/resume/Header.astro';
 import Languages from '@components/resume/Languages.astro';
 import Skills from '@components/resume/Skills.astro';
 import Work from '@components/resume/Work.astro';
+import Project from '@components/resume/Project.astro';
 import Button from '@components/shared/Button.astro';
 import List from '@components/shared/List.astro';
 import InlineList from '@components/shared/InlineList.astro';
@@ -10,6 +11,7 @@ import Link from '@components/shared/Link.astro';
 import Section from '@components/shared/Section.astro';
 import SubSection from '@components/shared/SubSection.astro';
 import type { Resume } from '@schemas/Resume';
+import SubSectionHeader from '@components/shared/SubSectionHeader.astro';
 
 export type Props = Resume;
 const {
@@ -74,90 +76,7 @@ const summaries = Array.isArray(summary) ? summary : [summary];
 
     <Section>{work?.map((work) => <Work {...work} />)}</Section>
 
-    <!-- PROJECTS -->
-    <Section>
-        <SubSection>
-            <header>
-                <h3>
-                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
-                        <li class="bg-blue-950 p-2">Proj</li>
-                        <li class="bg-blue-950 p-2">
-                            <span class="text-yellow-300"><a href="https://musikleben.live">musikleben.live</a></span>
-                        </li>
-                    </ul>
-                </h3>
-                <p class="text-lg"><i>December 2024 to Present</i></p>
-            </header>
-
-            <main class="flex flex-col gap-6">
-                <p class="text-xl">
-                    Your music, your events, Live in Lu. Conceptualizing, development and deployment of a web solution for a local
-                    non-profit event organizer as the final project for the web development bootcamp @ WBS CODING SCHOOL.
-                </p>
-                <List headline="Highlights">
-                    <li>Conceptualizing the design in Figma creating a reusable design system</li>
-                    <li>Creating a fully responsive web application using React.js and Tailwind CSS</li>
-                    <li>Using Express.js & PostgreSQL for the backend REST-API</li>
-                    <li>Hosting the application on a Windows Server using IIS</li>
-                    <li>Live support for the project and its customer</li>
-                </List>
-            </main>
-
-            <footer class="flex flex-col gap-6">
-                <InlineList title="Skills:">
-                    <li>TypeScript & JavaScript</li>
-                    <li>React.js</li>
-                    <li>Tailwind CSS</li>
-                    <li>Figma</li>
-                    <li>REST-API</li>
-                    <li>Express.js</li>
-                    <li>PostgreSQL</li>
-                    <li>Node.js</li>
-                    <li>Internet Information Services (IIS) Hosting</li>
-                </InlineList>
-
-                <Button href="https://musikleben.live" text="→ Project" />
-            </footer>
-        </SubSection>
-
-        <SubSection>
-            <header>
-                <h3>
-                    <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
-                        <li class="bg-blue-950 p-2">Proj</li>
-                        <li class="bg-blue-950 p-2"><span class="text-yellow-300">Resume</span></li>
-                    </ul>
-                </h3>
-                <p class="text-lg"><i>April 2024</i></p>
-            </header>
-
-            <main class="flex flex-col gap-6">
-                <p class="text-xl">
-                    Delivering my resume build with new web technologies, giving me an opportuntity to learn and showcase skills, thought
-                    and work processes.
-                </p>
-
-                <List headline="Highlights">
-                    <li>
-                        Getting to know ( <Link href="https://astro.build/">https://astro.build/</Link> )
-                    </li>
-                    <li>Using GitHub Pages to host the project</li>
-                    <li>Using Figma for design</li>
-                </List>
-            </main>
-
-            <footer class="flex flex-col gap-6">
-                <InlineList title="Skills:">
-                    <li>Astro.js</li>
-                    <li>Tailwind CSS</li>
-                    <li>HTML5</li>
-                    <li>GitHub Pages</li>
-                </InlineList>
-
-                <Button href="https://github.com/reneSpeaks/Resume" text="→ Project" />
-            </footer>
-        </SubSection>
-    </Section>
+    <Section>{projects?.map((project) => <Project {...project} />)}</Section>
 
     <!-- EDUCATION & CERTIFICATES -->
     <Section>

@@ -1,17 +1,17 @@
 ---
-import SubSection from '@components/shared/SubSection.astro';
-import SubSectionHeader from '@components/shared/SubSectionHeader.astro';
+import Button from '@components/shared/Button.astro';
 import InlineList from '@components/shared/InlineList.astro';
 import List from '@components/shared/List.astro';
-import type { Work } from '@schemas/Resume';
+import SubSection from '@components/shared/SubSection.astro';
+import SubSectionHeader from '@components/shared/SubSectionHeader.astro';
+import type { Project } from '@schemas/Resume';
 
-export type Props = Work;
-
-const { name, position, startDate, endDate, summary, highlights, skills, url } = Astro.props as Props;
+export type Props = Project;
+const { name, summary, startDate, endDate, highlights, skills, url } = Astro.props as Props;
 ---
 
 <SubSection>
-    <SubSectionHeader type="Work" title={position} subtitle={name} url={url} startDate={startDate} endDate={endDate} />
+    <SubSectionHeader type="Proj" subtitle={name} url={url} startDate={startDate} endDate={endDate} />
 
     <main class="flex flex-col gap-6">
         <p class="text-xl">{summary}</p>
@@ -25,5 +25,7 @@ const { name, position, startDate, endDate, summary, highlights, skills, url } =
         <InlineList title="Skills:">
             {skills && skills.map((skill) => <li>{skill}</li>)}
         </InlineList>
+
+        {url && <Button href={url} text="→ Project" />}
     </footer>
 </SubSection>
