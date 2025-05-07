@@ -1,6 +1,6 @@
 ---
-import { Skill } from '@schemas/Resume';
 import Section from '@components/shared/Section.astro';
+import type { Skill } from '@schemas/Resume';
 
 export type Props = { skills: Skill[]; sortedBy?: 'level' };
 const { skills, sortedBy } = Astro.props as Props;
