@@ -1,0 +1,35 @@
+---
+import Section from '@components/shared/Section.astro';
+import type { Language } from '@schemas/Resume';
+
+export type Props = { languages: Language[] };
+const { languages } = Astro.props as Props;
+
+function compareLevel(a: Language, b: Language) {
+    const asNumber = {
+        A1: 7,
+        A2: 6,
+        B1: 5,
+        B2: 4,
+        C1: 3,
+        C2: 2,
+        native: 1
+    };
+
+    return asNumber[a.fluency] - asNumber[b.fluency];
+}
+
+const normalisedLanguages = [...languages].sort(compareLevel);
+---
+
+<Section>
+    <ul class="flex flex-row gap-6 text-white font-bold text-2xl">
+        {
+            normalisedLanguages.map(({ language, fluency }) => (
+                <li class="bg-primary p-2">
+                    <span class="text-highlight">{language}</span> {fluency}
+                </li>
+            ))
+        }
+    </ul>
+</Section>

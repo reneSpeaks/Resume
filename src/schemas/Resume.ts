@@ -5,11 +5,13 @@ const profileSchema = z.object({
     url: z.string().url()
 });
 
-export type Proifle = z.infer<typeof profileSchema>;
+export type Profile = z.infer<typeof profileSchema>;
 
 const summaryObjectSchema = z.object({
     title: z.string(),
-    content: z.string()
+    content: z.optional(z.string()),
+    subcontent: z.optional(z.string()),
+    highlights: z.optional(z.array(z.string()))
 });
 
 type SummaryObject = z.infer<typeof summaryObjectSchema>;
@@ -19,14 +21,17 @@ const summarySchema = z.string().or(summaryObjectSchema);
 export type Summary = z.infer<typeof summarySchema>;
 
 export function isSummaryObject(summary: Summary): summary is SummaryObject {
-    return typeof summary === 'object' && 'title' in summary && 'content' in summary;
+    return (
+        typeof summary === 'object' && 'title' in summary && ('content' in summary || 'subcontent' in summary || 'highlights' in summary)
+    );
 }
 
 const basicsSchema = z.object({
     name: z.string(),
     label: z.string(),
-    summary: z.array(summarySchema),
+    summary: summarySchema.or(z.array(summarySchema)),
     image: z.optional(z.string()),
+    email: z.optional(z.string().email()),
     url: z.optional(z.string().url()),
     profiles: z.optional(z.array(profileSchema))
 });
@@ -35,42 +40,44 @@ export type Basics = z.infer<typeof basicsSchema>;
 
 const dateStringSchema = z
     .string()
-    .regex(/^(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}$/);
+    .regex(/^(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}$|^Present$/);
 
 const certificateSchema = z.object({
     name: z.string(),
-    issuer: z.string(),
+    institution: z.string(),
     startDate: dateStringSchema,
+    summary: z.optional(z.string()),
+    skills: z.optional(z.array(z.string())),
     url: z.optional(z.string().url())
 });
 
 export type Certificate = z.infer<typeof certificateSchema>;
 
 const educationSchema = z.object({
-    area: z.string(),
+    name: z.string(),
     institution: z.string(),
-    studyType: z.string(),
     startDate: dateStringSchema,
     endDate: z.optional(dateStringSchema),
     summary: z.optional(z.string()),
-    score: z.optional(z.string())
+    skills: z.optional(z.array(z.string())),
+    url: z.optional(z.string().url())
 });
 
 export type Education = z.infer<typeof educationSchema>;
 
 const languageSchema = z.object({
     language: z.string(),
-    fluency: z.enum(['A', 'B', 'C', 'native'])
+    fluency: z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'native'])
 });
 
 export type Language = z.infer<typeof languageSchema>;
 
 const projectSchema = z.object({
     name: z.string(),
-    description: z.string(),
-    highlights: z.optional(z.array(z.string())),
+    summary: z.string(),
     startDate: dateStringSchema,
     endDate: z.optional(dateStringSchema),
+    highlights: z.optional(z.array(z.string())),
     skills: z.optional(z.array(z.string())),
     url: z.optional(z.string().url())
 });
@@ -91,8 +98,6 @@ const workSchema = z.object({
     startDate: dateStringSchema,
     endDate: z.optional(dateStringSchema),
     highlights: z.optional(z.array(z.string())),
-    location: z.optional(z.string()),
-    projects: z.optional(z.array(z.string())),
     skills: z.optional(z.array(z.string())),
     url: z.optional(z.string().url())
 });

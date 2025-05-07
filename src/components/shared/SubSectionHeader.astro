@@ -1,0 +1,36 @@
+---
+const { type, title, subtitle, url, startDate, endDate, institution } = Astro.props as Props;
+export type Props = {
+    type: string;
+    title?: string;
+    subtitle?: string;
+    url?: string;
+    startDate: string;
+    endDate?: string;
+    institution?: string;
+};
+---
+
+<header>
+    <h3>
+        <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
+            <li class="bg-primary p-2">{type}</li>
+            <li class="bg-primary p-2">
+                {title && <span class="text-highlight">{title}</span>}
+                {
+                    (url && title && (
+                        <a href={url} class="hover:text-highlight duration-300">
+                            {subtitle}
+                        </a>
+                    )) ||
+                        (url && !title && (
+                            <a href={url} class="text-highlight">
+                                {subtitle}
+                            </a>
+                        )) || <>{subtitle}</>
+                }
+            </li>
+        </ul>
+        <p class="text-lg"><i>{startDate} {endDate && 'to ' + endDate}</i> {institution && '@ ' + institution}</p>
+    </h3>
+</header>

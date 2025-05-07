@@ -1,0 +1,32 @@
+---
+import Section from '@components/shared/Section.astro';
+import type { Skill } from '@schemas/Resume';
+
+export type Props = { skills: Skill[]; sortedBy?: 'level' };
+const { skills, sortedBy } = Astro.props as Props;
+
+function compareLevel(a: Skill, b: Skill) {
+    const asNumber = {
+        beginner: 4,
+        intermediate: 3,
+        advanced: 2,
+        expert: 1
+    };
+
+    return asNumber[a.level] - asNumber[b.level];
+}
+
+const normalisedSkills = sortedBy === 'level' ? [...skills].sort(compareLevel) : skills;
+---
+
+<Section headline="My Skills">
+    <p>
+        {
+            normalisedSkills.map(({ name, level }) => (
+                <>
+                    <span class={level}>{name}</span>,
+                </>
+            ))
+        }
+    </p>
+</Section>

@@ -1,31 +1,357 @@
 {
-    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
     "basics": {
         "name": "René Weiberlenn",
         "label": "Full Stack Web Developer",
-        "image": "avatar.png",
+        "image": "/Resume/avatar.png",
         "email": "rene.weiberlenn@live.de",
         "url": "https://reneSpeaks.github.io/Resume",
         "summary": [
             {
                 "title": "I love creating!",
-                "content": "I love creating web applicatio,ns that are not only functional but also visually appealing. My passion drives me to keep working on my skills to produce the bests product for any given situation and I love figuring out the intrecacies of new technology to make not only my work but also the work of those around me easier and more efficient. Sharing my experience and benefitting from the experience of others is what I love most about working in a development team. I am always looking for new challenges and opportunities to grow as a developer."
+                "content": "I love creating web applications that are not only functional but also visually appealing. My passion drives me to keep working on my skills to produce the bests product for any given situation and I love figuring out the intrecacies of new technology to make not only my work but also the work of those around me easier and more efficient. Sharing my experience and benefitting from the experience of others is what I love most about working in a development team. I am always looking for new challenges and opportunities to grow as a developer."
             },
             {
                 "title": "Hey!",
-                "content": "I'm René, a passionate Full-Stack Web Developer with a knack for creating dynamic and user-friendly web applications. My time as a freelancer as an audiodesigner gives me unique insights on how best to tailor to customers and my passion in development pushes me further on my journey to be the developer I want to be. My strengths lie particularly in TypeScript and React.js for the frontend as well as Express.js and .NET for backend solutions. I always enjoy to engage with the full breadth of web development and strive to understand not only one but all aspects of an application in its fullest."
+                "content": "I'm René, a passionate Full-Stack Web Developer with a knack for creating dynamic and user-friendly web applications. My time as a freelancer as an audiodesigner gives me unique insights on how best to tailor to customers and my passion in development pushes me further on my journey to be the developer I want to be. My strengths lie particularly in TypeScript and React.js for the frontend as well as Express.js and .NET for backend solutions. I always enjoy to engage with the full breadth of web development and strive to understand not only one but all aspects of an application in its fullest.",
+                "subcontent": "Beyond coding, I enjoy creative challenges that push me to think outside the box and hone my attention to detail. I love to learn and grow and as such I am always on the lookout for new things to improve my understanding of this fast moving, exciting world of development."
+            },
+            {
+                "title": "My Principles",
+                "highlights": [
+                    "Communicate respectfully and transparently",
+                    "Have a requirements focused architectural and development process",
+                    "Achieve good and maintainable code, based on the architecture, automated testing and the concept of polite code ( https://youtu.be/7EmboKQH8lM?t=3160 )",
+                    "Be open to new ideas and approaches",
+                    "Share knowledge within your team and beyond"
+                ]
             }
         ],
-        "location": {
-            "countryCode": "DE",
-            "address": ""
-        },
         "profiles": [
             {
                 "network": "LinkedIn",
-                "username": "rene-weiberlenn",
                 "url": "https://www.linkedin.com/in/rene-weiberlenn/"
             }
         ]
-    }
+    },
+    "languages": [
+        {
+            "language": "German",
+            "fluency": "native"
+        },
+        {
+            "language": "English",
+            "fluency": "C2"
+        }
+    ],
+    "skills": [
+        {
+            "name": "TypeScript",
+            "level": "expert"
+        },
+        {
+            "name": "JavaScript",
+            "level": "expert"
+        },
+        {
+            "name": "C#",
+            "level": "advanced"
+        },
+        {
+            "name": "SQL",
+            "level": "advanced"
+        },
+        {
+            "name": "HTML5",
+            "level": "expert"
+        },
+        {
+            "name": "CSS3",
+            "level": "advanced"
+        },
+        {
+            "name": "Tailwind CSS",
+            "level": "expert"
+        },
+        {
+            "name": "SCSS",
+            "level": "intermediate"
+        },
+        {
+            "name": "React.js",
+            "level": "expert"
+        },
+        {
+            "name": "Next.js",
+            "level": "advanced"
+        },
+        {
+            "name": "Astro.js",
+            "level": "intermediate"
+        },
+        {
+            "name": "Jest",
+            "level": "intermediate"
+        },
+        {
+            "name": "React Testing Library",
+            "level": "intermediate"
+        },
+        {
+            "name": "Node.js",
+            "level": "expert"
+        },
+        {
+            "name": "Express.js",
+            "level": "expert"
+        },
+        {
+            "name": ".NET",
+            "level": "intermediate"
+        },
+        {
+            "name": "ASP.NET",
+            "level": "intermediate"
+        },
+        {
+            "name": "REST API",
+            "level": "expert"
+        },
+        {
+            "name": "MongoDB",
+            "level": "advanced"
+        },
+        {
+            "name": "PostgreSQL",
+            "level": "advanced"
+        },
+        {
+            "name": "MySQL",
+            "level": "intermediate"
+        },
+        {
+            "name": "Git",
+            "level": "advanced"
+        }
+    ],
+    "work": [
+        {
+            "name": "DocMorris",
+            "position": "Intern IT",
+            "startDate": "February 2025",
+            "endDate": "April 2025",
+            "summary": "I had the amazing opportuntity to work alongside leading experts from the online ecommece apothecary, developing web solutions under the guidance of an amazing team. Health in once click, by digitalizing the patient. With each new project I joined a new department, learning new and exciting things to further develop my understanding of Full-Stack Development.",
+            "url": "https://www.linkedin.com/company/docmorris",
+            "highlights": [
+                "Redesigning components and advancing the white-label solution for their Zendesk.",
+                "Researching and implementing new solutions for their advertisement system on their website.",
+                "Creating newly designed components for popups and banners using their figma design system.",
+                "Creating a tableau dashboard to track sales generated by search engines."
+            ],
+            "skills": [
+                "TypeScript",
+                "JavaScript",
+                "React.js",
+                "Next.js",
+                "Tailwind CSS",
+                "Next.js",
+                "Jest",
+                "React Testing Library",
+                "REST API",
+                "GitLab",
+                "Figma",
+                "GitLab",
+                "PostgreSQL",
+                "Tableau & Tableau Server",
+                "Zendesk",
+                "AB-Tasty"
+            ]
+        },
+        {
+            "name": "Freelancer",
+            "position": "Audiodesigner",
+            "startDate": "January 2011",
+            "endDate": "November 2019",
+            "summary": "Helping brands stand out with high quality audio advertisement in radio and video media using newest digital audio technology and voiceover.",
+            "highlights": [
+                "Conceptualizing and running radio and podcast shows and their unique need for audiodesign.",
+                "Creating and maintaining a digital audio library for customers.",
+                "Developing high quality audio voiceover on demand.",
+                "Mentoring and onboarding colleagues to projects."
+            ],
+            "skills": [
+                "Pro Tools",
+                "Adobe Audition",
+                "Adobe Premiere Pro",
+                "Adobe After Effects",
+                "Sound Design",
+                "Audio Editing, Mixing & Mastering",
+                "Voiceover",
+                "Sound Effects",
+                "Audio Advertisement Design"
+            ]
+        },
+        {
+            "name": "",
+            "position": "Customer Support Agent",
+            "startDate": "June 2009",
+            "endDate": "December 2010",
+            "summary": "Increased customer retention and sales with high quality email and phone support for multiple brands.",
+            "highlights": [
+                "Telemarketing campaigns for local newspaper using behavioral patterns to increase sales.",
+                "1st level support for various brands including a car insurance as well as mobile phone and pay-tv contracts"
+            ],
+            "skills": [
+                "Customer Relations Management",
+                "Customer Retention",
+                "E-Mail Support",
+                "Phone Support",
+                "Telemarketing",
+                "Sales",
+                "Customer Service"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "musikleben.live",
+            "summary": "Your music, your events, Live in Lu. Conceptualizing, development and deployment of a web solution for a local non-profit event organizer as the final project for the web development bootcamp @ WBS CODING SCHOOL.",
+            "startDate": "December 2024",
+            "endDate": "Present",
+            "url": "https://musikleben.live",
+            "highlights": [
+                "Conceptualizing the design in Figma creating a reusable design system.",
+                "Creating a fully responsive web application using React.js and Tailwind CSS.",
+                "Using Express.js & PostgreSQL for the backend REST-API.",
+                "Hosting the application on a Windows Server using IIS.",
+                "Live support for the project and its customer"
+            ],
+            "skills": [
+                "TypeScript",
+                "JavaScript",
+                "React.js",
+                "Tailwind CSS",
+                "Express.js",
+                "PostgreSQL",
+                "REST API",
+                "Node.js",
+                "Internet Information Services (IIS) Hosting",
+                "Git",
+                "Figma"
+            ]
+        },
+        {
+            "name": "Resume",
+            "summary": "Delivering my resume build with new web technologies, giving me an opportuntity to learn and showcase skills, thought and work processes.",
+            "startDate": "April 2025",
+            "endDate": "Present",
+            "url": "https://github.com/reneSpeaks/Resume",
+            "highlights": [
+                "Getting to know ( https://astro.build/ )",
+                "Using GitHub Pages to host the project",
+                "Practicing DevOps with GitHub Actions"
+            ],
+            "skills": ["Astro.js", "Tailwind CSS", "HTML5", "GitHub Pages", "JSX", "GitHub Actions", "Figma"]
+        }
+    ],
+    "education": [
+        {
+            "name": "Full Stack Web Development",
+            "institution": "WBS CODING SCHOOL",
+            "startDate": "September 2024",
+            "endDate": "January 2025",
+            "summary": "I turned my ambition into skills, using WBS COODING SCHOOL as a stepping stone to change my career. In 17 Weeks (680 Hours), I gained a fundamental understanding of Web & App Development at the bootcamp. Their instructors led me through a cutting-edge curriculum and taught not only the skills I need to succeed but also the principles a developer should follow to survive in the fast-paced world of development.",
+            "url": "https://musikleben.live/documents/certificate_Rene_Weiberlenn.pdf",
+            "skills": [
+                "Web Development",
+                "Full Stack Development",
+                "Frontend Development",
+                "Backend Development",
+                "Agile Development",
+                "React.js",
+                "Vite",
+                "Parcel",
+                "Tailwind CSS",
+                "Express.js",
+                "PostgreSQL",
+                "REST API",
+                "Node.js",
+                "Git",
+                "Mongo DB",
+                "Node.js",
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "UX/UI Fundamentals",
+                "Figma",
+                "GitHub",
+                "GitHub Pages",
+                "Trello",
+                "Functional Programming",
+                "Object Oriented Programming",
+                "SEO"
+            ]
+        },
+        {
+            "name": "IT Betriebswirt (IU)",
+            "institution": "IU International Hochschule Berlin",
+            "startDate": "October 2022",
+            "endDate": "January 2024",
+            "summary": "In an effort to deepen my understanding of business processes and their relation to IT, I enrolled in the IT Betribeswirt (IU) programm at IU Inernational University Berlin. This program is designed to provide a comprehensive understanding of the intersection between IT and business, equipping me with the skills needed to excel in this dynamic field. The curriculum covers a wide range of topics, including project management, business informatics, and agile software development.",
+            "skills": [
+                "Business Informatics",
+                "Project Management",
+                "Agile Software Development",
+                "Business Processes",
+                "IT Management",
+                "Business Administration",
+                "Accounting",
+                "Financials"
+            ]
+        },
+        {
+            "name": "IT-System-Kaufmann (IHK)",
+            "institution": "bbw Akademie Karlshorst",
+            "startDate": "September 2004",
+            "endDate": "January 2008",
+            "summary": "I completed my apprenticeship as an IT-System-Kaufmann at the bbw Akademie Karlshorst. I learned the basics of IT and business processes, which gave me a solid foundation for my career. I learned how to work with customers and how to understand their needs and requirements.",
+            "url": "https://musikleben.live/documents/documents_Rene_Weiberlenn.pdf",
+            "skills": [
+                "Object Oriented Programming",
+                "C",
+                "C++",
+                "MySQL",
+                "HTML5",
+                "CSS3",
+                "Functional Programming",
+                "Bookkeeping",
+                "Financials",
+                "Accounting",
+                "Business Administration",
+                "Business Processes",
+                "Project Management",
+                "Customer Management",
+                "IT Management",
+                "IT Systems",
+                "IT Security",
+                "Business English"
+            ]
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Battle of the Bootcamps 2024",
+            "institution": "WBS CODING SCHOOL",
+            "startDate": "November 2024",
+            "summary": "I participated and won the Battle of the Bootcamps 2024 Hackathon with my team from WBS CODING SCHOOL and Stack Fuel, where we participated for the theme: Innovative apps for Greener Offices. In 48 grueling hours we created a working prototype web application and convinced the jury from DocMorris and Delivery Hero that our entry was the best! Out of our team I was chosen to win the incredible opportunity for an internship at DocMorris!",
+            "url": "https://eu.badgr.com/public/assertions/0rdsMjr6RgWslYYpdRR-mQ",
+            "skills": ["React.js", "Vite", "Fast API", "PostgreSQL", "REST API", "Microsoft Copilot"]
+        },
+        {
+            "name": "Foundational C# with Microsoft",
+            "institution": "freeCodeCamp",
+            "startDate": "February 2024",
+            "url": "https://www.freecodecamp.org/certification/Pathing/foundational-c-sharp-with-microsoft",
+            "skills": ["C#", "Object Oriented Programming", "Functional Programming"]
+        }
+    ]
 }

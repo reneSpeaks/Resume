@@ -1,0 +1,9 @@
+---
+const { title } = Astro.props as Props;
+export type Props = { title?: string };
+---
+
+<ul class="text-xl list-disc flex justify-start flex-wrap leading-6 gap-x-6 list-inside">
+    {title && <li class="list-none font-semibold">{title}</li>}
+    <slot />
+</ul>

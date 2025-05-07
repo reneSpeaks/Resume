@@ -1,0 +1,28 @@
+---
+import List from '@components/shared/List.astro';
+import Section from '@components/shared/Section.astro';
+import type { Summary } from '@schemas/Resume';
+import { isSummaryObject } from '@schemas/Resume';
+
+export type Props = { summary: Summary };
+const { summary } = Astro.props as Props;
+
+const title = isSummaryObject(summary) ? summary.title : 'Summary';
+const content = isSummaryObject(summary) ? summary.content : undefined;
+const subcontent = isSummaryObject(summary) ? summary.subcontent : undefined;
+const highlights = isSummaryObject(summary) ? summary.highlights : undefined;
+---
+
+<Section headline={title}>
+    {content && <p class="text-xl">{content}</p>}
+    {subcontent && <p class="text-xl">{subcontent}</p>}
+    {
+        highlights && (
+            <List>
+                {highlights.map((highlight) => (
+                    <li>{highlight}</li>
+                ))}
+            </List>
+        )
+    }
+</Section>

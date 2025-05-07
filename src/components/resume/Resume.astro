@@ -1,0 +1,47 @@
+---
+import Header from '@components/resume/Header.astro';
+import Languages from '@components/resume/Languages.astro';
+import Summary from '@components/resume/Summary.astro';
+import Skills from '@components/resume/Skills.astro';
+import Work from '@components/resume/Work.astro';
+import Project from '@components/resume/Project.astro';
+import Education from '@components/resume/Education.astro';
+import Certificate from '@components/resume/Certificate.astro';
+import Section from '@components/shared/Section.astro';
+import type { Resume } from '@schemas/Resume';
+
+export type Props = Resume;
+const {
+    basics: { summary, ...basics },
+    certificates,
+    education,
+    languages,
+    projects,
+    skills,
+    work
+} = Astro.props as Props;
+
+const summaries = Array.isArray(summary) ? summary : [summary];
+---
+
+<header>
+    <Header {...basics} />
+</header>
+
+<main class="flex flex-col w-full items-center justify-center gap-16 mb-16 p-4">
+    {languages && <Languages languages={languages} />}
+
+    {summaries.map((summary) => <Summary summary={summary} />)}
+
+    {skills && <Skills skills={skills} />}
+
+    <Section>{work?.map((work) => <Work {...work} />)}</Section>
+
+    <Section>{projects?.map((project) => <Project {...project} />)}</Section>
+
+    <Section>
+        {education && education.map((edu) => <Education {...edu} />)}
+
+        {certificates && certificates.map((cert) => <Certificate {...cert} />)}
+    </Section>
+</main>

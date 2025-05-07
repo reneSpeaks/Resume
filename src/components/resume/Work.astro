@@ -1,0 +1,29 @@
+---
+import SubSection from '@components/shared/SubSection.astro';
+import SubSectionHeader from '@components/shared/SubSectionHeader.astro';
+import InlineList from '@components/shared/InlineList.astro';
+import List from '@components/shared/List.astro';
+import type { Work } from '@schemas/Resume';
+
+export type Props = Work;
+
+const { name, position, startDate, endDate, summary, highlights, skills, url } = Astro.props as Props;
+---
+
+<SubSection>
+    <SubSectionHeader type="Work" title={position} subtitle={name} url={url} startDate={startDate} endDate={endDate} />
+
+    <main class="flex flex-col gap-6">
+        <p class="text-xl">{summary}</p>
+
+        <List headline="Highlights">
+            {highlights && highlights.map((highlight) => <li>{highlight}</li>)}
+        </List>
+    </main>
+
+    <footer class="flex flex-col gap-6">
+        <InlineList title="Skills:">
+            {skills && skills.map((skill) => <li>{skill}</li>)}
+        </InlineList>
+    </footer>
+</SubSection>
