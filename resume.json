@@ -245,8 +245,113 @@
             "startDate": "April 2025",
             "endDate": "Present",
             "url": "https://github.com/reneSpeaks/Resume",
-            "highlights": ["Getting to know ( https://astro.build/ )", "Using GitHub Pages to host the project", "Using Figma for design"],
-            "skills": ["Astro.js", "Tailwind CSS", "HTML5", "GitHub Pages", "GitHub Actions", "Figma"]
+            "highlights": [
+                "Getting to know ( https://astro.build/ )",
+                "Using GitHub Pages to host the project",
+                "Practicing DevOps with GitHub Actions"
+            ],
+            "skills": ["Astro.js", "Tailwind CSS", "HTML5", "GitHub Pages", "JSX", "GitHub Actions", "Figma"]
+        }
+    ],
+    "education": [
+        {
+            "name": "Full Stack Web Development",
+            "institution": "WBS CODING SCHOOL",
+            "startDate": "September 2024",
+            "endDate": "January 2025",
+            "summary": "I turned my ambition into skills, using WBS COODING SCHOOL as a stepping stone to change my career. In 17 Weeks (680 Hours), I gained a fundamental understanding of Web & App Development at the bootcamp. Their instructors led me through a cutting-edge curriculum and taught not only the skills I need to succeed but also the principles a developer should follow to survive in the fast-paced world of development.",
+            "url": "https://musikleben.live/documents/certificate_Rene_Weiberlenn.pdf",
+            "skills": [
+                "Web Development",
+                "Full Stack Development",
+                "Frontend Development",
+                "Backend Development",
+                "Agile Development",
+                "React.js",
+                "Vite",
+                "Parcel",
+                "Tailwind CSS",
+                "Express.js",
+                "PostgreSQL",
+                "REST API",
+                "Node.js",
+                "Git",
+                "Mongo DB",
+                "Node.js",
+                "JavaScript",
+                "HTML5",
+                "CSS3",
+                "UX/UI Fundamentals",
+                "Figma",
+                "GitHub",
+                "GitHub Pages",
+                "Trello",
+                "Functional Programming",
+                "Object Oriented Programming",
+                "SEO"
+            ]
+        },
+        {
+            "name": "IT Betriebswirt (IU)",
+            "institution": "IU International Hochschule Berlin",
+            "startDate": "October 2022",
+            "endDate": "January 2024",
+            "summary": "In an effort to deepen my understanding of business processes and their relation to IT, I enrolled in the IT Betribeswirt (IU) programm at IU Inernational University Berlin. This program is designed to provide a comprehensive understanding of the intersection between IT and business, equipping me with the skills needed to excel in this dynamic field. The curriculum covers a wide range of topics, including project management, business informatics, and agile software development.",
+            "skills": [
+                "Business Informatics",
+                "Project Management",
+                "Agile Software Development",
+                "Business Processes",
+                "IT Management",
+                "Business Administration",
+                "Accounting",
+                "Financials"
+            ]
+        },
+        {
+            "name": "IT-System-Kaufmann (IHK)",
+            "institution": "bbw Akademie Karlshorst",
+            "startDate": "September 2004",
+            "endDate": "January 2008",
+            "summary": "I completed my apprenticeship as an IT-System-Kaufmann at the bbw Akademie Karlshorst. I learned the basics of IT and business processes, which gave me a solid foundation for my career. I learned how to work with customers and how to understand their needs and requirements.",
+            "url": "https://musikleben.live/documents/documents_Rene_Weiberlenn.pdf",
+            "skills": [
+                "Object Oriented Programming",
+                "C",
+                "C++",
+                "MySQL",
+                "HTML5",
+                "CSS3",
+                "Functional Programming",
+                "Bookkeeping",
+                "Financials",
+                "Accounting",
+                "Business Administration",
+                "Business Processes",
+                "Project Management",
+                "Customer Management",
+                "IT Management",
+                "IT Systems",
+                "IT Security",
+                "Business English"
+            ]
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Battle of the Bootcamps 2024",
+            "institution": "WBS CODING SCHOOL",
+            "startDate": "November 2024",
+            "summary": "I participated and won the Battle of the Bootcamps 2024 Hackathon with my team from WBS CODING SCHOOL and Stack Fuel, where we participated for the theme: Innovative apps for Greener Offices. In 48 grueling hours we created a working prototype web application and convinced the jury from DocMorris and Delivery Hero that our entry was the best! Out of our team I was chosen to win the incredible opportunity for an internship at DocMorris!",
+            "url": "https://eu.badgr.com/public/assertions/0rdsMjr6RgWslYYpdRR-mQ",
+            "skills": ["React.js", "Vite", "Fast API", "PostgreSQL", "REST API", "Microsoft Copilot"]
+        },
+        {
+            "name": "Foundational C# with Microsoft",
+            "institution": "freeCodeCamp",
+            "startDate": "February 2024",
+            "url": "https://www.freecodecamp.org/certification/Pathing/foundational-c-sharp-with-microsoft",
+            "skills": ["C#", "Object Oriented Programming", "Functional Programming"]
         }
     ]
 }

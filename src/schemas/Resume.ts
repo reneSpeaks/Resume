@@ -44,21 +44,23 @@ const dateStringSchema = z
 
 const certificateSchema = z.object({
     name: z.string(),
-    issuer: z.string(),
+    institution: z.string(),
     startDate: dateStringSchema,
+    summary: z.optional(z.string()),
+    skills: z.optional(z.array(z.string())),
     url: z.optional(z.string().url())
 });
 
 export type Certificate = z.infer<typeof certificateSchema>;
 
 const educationSchema = z.object({
-    area: z.string(),
+    name: z.string(),
     institution: z.string(),
-    studyType: z.string(),
     startDate: dateStringSchema,
     endDate: z.optional(dateStringSchema),
     summary: z.optional(z.string()),
-    score: z.optional(z.string())
+    skills: z.optional(z.array(z.string())),
+    url: z.optional(z.string().url())
 });
 
 export type Education = z.infer<typeof educationSchema>;

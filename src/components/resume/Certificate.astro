@@ -1,0 +1,37 @@
+---
+import SubSection from '@components/shared/SubSection.astro';
+import SubSectionHeader from '@components/shared/SubSectionHeader.astro';
+import InlineList from '@components/shared/InlineList.astro';
+import Button from '@components/shared/Button.astro';
+import type { Certificate } from '@schemas/Resume';
+
+export type Props = Certificate;
+
+const { name, institution, startDate, summary, skills, url } = Astro.props as Props;
+---
+
+<SubSection>
+    <SubSectionHeader type="Cer" title={name} url={url} startDate={startDate} institution={institution} />
+
+    {
+        summary && (
+            <main class="flex flex-col gap-6">
+                <p class="text-xl">{summary}</p>
+            </main>
+        )
+    }
+
+    <footer class="flex flex-col gap-6">
+        {
+            skills && (
+                <InlineList title="Skills:">
+                    {skills.map((skill) => (
+                        <li>{skill}</li>
+                    ))}
+                </InlineList>
+            )
+        }
+
+        {url && <Button href={url} text="→ Credential" />}
+    </footer>
+</SubSection>

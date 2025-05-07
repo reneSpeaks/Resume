@@ -1,13 +1,13 @@
 ---
-const { type, title, subtitle, url, startDate, endDate, location } = Astro.props as Props;
+const { type, title, subtitle, url, startDate, endDate, institution } = Astro.props as Props;
 export type Props = {
     type: string;
     title?: string;
-    subtitle: string;
+    subtitle?: string;
     url?: string;
     startDate: string;
     endDate?: string;
-    location?: string;
+    institution?: string;
 };
 ---
 
@@ -31,6 +31,6 @@ export type Props = {
                 }
             </li>
         </ul>
-        <p class="text-lg"><i>{startDate} {endDate && 'to ' + endDate}</i> {location && '@ ' + location}</p>
+        <p class="text-lg"><i>{startDate} {endDate && 'to ' + endDate}</i> {institution && '@ ' + institution}</p>
     </h3>
 </header>
