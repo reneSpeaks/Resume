@@ -3,3 +3,26 @@
 :root {
     --list-image: url('../assets/checkmark.svg');
 }
+
+@theme {
+    --color-primary: oklch(0.282 0.091 267.935);
+    --color-secondary: oklch(0.707 0.165 254.624);
+    --color-tertiary: oklch(0.882 0.059 254.128);
+    --color-highlight: oklch(0.905 0.182 98.111);
+}
+
+.expert {
+    @apply hover:text-primary cursor-pointer text-4xl font-bold duration-300;
+}
+
+.advanced {
+    @apply hover:text-primary cursor-pointer text-3xl font-semibold duration-300;
+}
+
+.intermediate {
+    @apply hover:text-primary cursor-pointer text-2xl font-medium duration-300;
+}
+
+.beginner {
+    @apply hover:text-primary cursor-pointer text-xl font-normal duration-300;
+}

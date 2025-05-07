@@ -14,17 +14,17 @@ export type Props = {
 <header>
     <h3>
         <ul class="flex flex-row gap-2 text-white font-semibold text-2xl">
-            <li class="bg-blue-950 p-2">{type}</li>
-            <li class="bg-blue-950 p-2">
-                {title && <span class="text-yellow-300">{title}</span>}
+            <li class="bg-primary p-2">{type}</li>
+            <li class="bg-primary p-2">
+                {title && <span class="text-highlight">{title}</span>}
                 {
                     (url && title && (
-                        <a href={url} class="hover:text-yellow-300 duration-300">
+                        <a href={url} class="hover:text-highlight duration-300">
                             {subtitle}
                         </a>
                     )) ||
                         (url && !title && (
-                            <a href={url} class="text-yellow-300">
+                            <a href={url} class="text-highlight">
                                 {subtitle}
                             </a>
                         )) || <>{subtitle}</>

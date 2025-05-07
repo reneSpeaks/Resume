@@ -26,8 +26,8 @@ const normalisedLanguages = [...languages].sort(compareLevel);
     <ul class="flex flex-row gap-6 text-white font-bold text-2xl">
         {
             normalisedLanguages.map(({ language, fluency }) => (
-                <li class="bg-blue-950 p-2">
-                    <span class="text-yellow-300">{language}</span> {fluency}
+                <li class="bg-primary p-2">
+                    <span class="text-highlight">{language}</span> {fluency}
                 </li>
             ))
         }
