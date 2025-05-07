@@ -14,6 +14,16 @@
                 "title": "Hey!",
                 "content": "I'm René, a passionate Full-Stack Web Developer with a knack for creating dynamic and user-friendly web applications. My time as a freelancer as an audiodesigner gives me unique insights on how best to tailor to customers and my passion in development pushes me further on my journey to be the developer I want to be. My strengths lie particularly in TypeScript and React.js for the frontend as well as Express.js and .NET for backend solutions. I always enjoy to engage with the full breadth of web development and strive to understand not only one but all aspects of an application in its fullest.",
                 "subcontent": "Beyond coding, I enjoy creative challenges that push me to think outside the box and hone my attention to detail. I love to learn and grow and as such I am always on the lookout for new things to improve my understanding of this fast moving, exciting world of development."
+            },
+            {
+                "title": "My Principles",
+                "highlights": [
+                    "Communicate respectfully and transparently",
+                    "Have a requirements focused architectural and development process",
+                    "Achieve good and maintainable code, based on the architecture, automated testing and the concept of polite code ( https://youtu.be/7EmboKQH8lM?t=3160 )",
+                    "Be open to new ideas and approaches",
+                    "Share knowledge within your team and beyond"
+                ]
             }
         ],
         "profiles": [

@@ -1,17 +1,16 @@
 ---
 import Header from '@components/resume/Header.astro';
 import Languages from '@components/resume/Languages.astro';
+import Summary from '@components/resume/Summary.astro';
 import Skills from '@components/resume/Skills.astro';
 import Work from '@components/resume/Work.astro';
 import Project from '@components/resume/Project.astro';
 import Button from '@components/shared/Button.astro';
 import List from '@components/shared/List.astro';
 import InlineList from '@components/shared/InlineList.astro';
-import Link from '@components/shared/Link.astro';
 import Section from '@components/shared/Section.astro';
 import SubSection from '@components/shared/SubSection.astro';
 import type { Resume } from '@schemas/Resume';
-import SubSectionHeader from '@components/shared/SubSectionHeader.astro';
 
 export type Props = Resume;
 const {
@@ -34,43 +33,7 @@ const summaries = Array.isArray(summary) ? summary : [summary];
 <main class="flex flex-col w-full items-center justify-center gap-16 mb-16 p-4">
     {languages && <Languages languages={languages} />}
 
-    <Section headline="I love creating!">
-        <p class="text-xl">
-            I love creating web applications that are not only functional but also visually appealing. My passion drives me to keep working
-            on my skills to produce the bests product for any given situation and I love figuring out the intrecacies of new technology to
-            make not only my work but also the work of those around me easier and more efficient. Sharing my experience and benefitting from
-            the experience of others is what I love most about working in a development team. I am always looking for new challenges and
-            opportunities to grow as a developer.
-        </p>
-    </Section>
-
-    <Section headline="Hey!">
-        <p class="text-xl">
-            I'm René, a passionate Full-Stack Web Developer with a knack for creating dynamic and user-friendly web applications. My time as
-            a freelancer as an audiodesigner gives me unique insights on how best to tailor to customers and my passion in development
-            pushes me further on my journey to be the developer I want to be. My strengths lie particularly in TypeScript and React.js for
-            the frontend as well as Express.js and .NET for backend solutions. I always enjoy to engage with the full breadth of web
-            development and strive to understand not only one but all aspects of an application in its fullest.
-        </p>
-        <p class="text-xl">
-            Beyond coding, I enjoy creative challenges that push me to think outside the box and hone my attention to detail. I love to
-            learn and grow and as such I am always on the lookout for new things to improve my understanding of this fast moving, exciting
-            world of development.
-        </p>
-    </Section>
-
-    <Section headline="My Principles">
-        <List>
-            <li>Communicate respectfully and transparently</li>
-            <li>Have a requirements focused architectural and development process</li>
-            <li>
-                Achieve good and maintainable code, based on the architecture, automated testing and the concept of polite code (
-                <Link href="https://youtu.be/7EmboKQH8lM?t=3160">https://youtu.be/7EmboKQH8lM?t=3160</Link> )
-            </li>
-            <li>Be open to new ideas and approaches</li>
-            <li>Share knowledge within your team and beyond</li>
-        </List>
-    </Section>
+    {summaries.map((summary) => <Summary summary={summary} />)}
 
     {skills && <Skills skills={skills} />}
 

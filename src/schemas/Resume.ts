@@ -9,7 +9,9 @@ export type Profile = z.infer<typeof profileSchema>;
 
 const summaryObjectSchema = z.object({
     title: z.string(),
-    content: z.string()
+    content: z.optional(z.string()),
+    subcontent: z.optional(z.string()),
+    highlights: z.optional(z.array(z.string()))
 });
 
 type SummaryObject = z.infer<typeof summaryObjectSchema>;
@@ -19,7 +21,9 @@ const summarySchema = z.string().or(summaryObjectSchema);
 export type Summary = z.infer<typeof summarySchema>;
 
 export function isSummaryObject(summary: Summary): summary is SummaryObject {
-    return typeof summary === 'object' && 'title' in summary && 'content' in summary;
+    return (
+        typeof summary === 'object' && 'title' in summary && ('content' in summary || 'subcontent' in summary || 'highlights' in summary)
+    );
 }
 
 const basicsSchema = z.object({
