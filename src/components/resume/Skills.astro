@@ -1,5 +1,6 @@
 ---
 import { Skill } from '@schemas/Resume';
+import Section from '@components/shared/Section.astro';
 
 export type Props = { skills: Skill[]; sortedBy?: 'level' };
 const { skills, sortedBy } = Astro.props as Props;
@@ -18,8 +19,7 @@ function compareLevel(a: Skill, b: Skill) {
 const normalisedSkills = sortedBy === 'level' ? [...skills].sort(compareLevel) : skills;
 ---
 
-<section id="skills" class="max-w-4xl w-full flex flex-col gap-6">
-    <h3 class="text-white text-2xl font-bold bg-blue-950 p-2 w-fit">My Skills</h3>
+<Section headline="My Skills">
     <p>
         {
             normalisedSkills.map(({ name, level }) => (
@@ -29,7 +29,7 @@ const normalisedSkills = sortedBy === 'level' ? [...skills].sort(compareLevel) :
             ))
         }
     </p>
-</section>
+</Section>
 
 <style>
     @import 'tailwindcss';

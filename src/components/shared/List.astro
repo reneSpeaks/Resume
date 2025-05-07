@@ -1,0 +1,9 @@
+---
+const { headline } = Astro.props as Props;
+export type Props = { headline?: string };
+---
+
+{headline && <h4 class="font-bold text-xl">{headline}</h4>}
+<ul class="text-xl pl-10 list-image-[var(--list-image)]">
+    <slot />
+</ul>

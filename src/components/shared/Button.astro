@@ -1,0 +1,9 @@
+---
+const { href, text } = Astro.props as Props;
+export type Props = { href: string; text: string };
+---
+
+<button
+    class="w-fit p-2 bg-yellow-300 text-shadow-blue-950 font-bold text-lg drop-shadow-md drop-shadow-blue-950 cursor-pointer hover:bg-blue-950 hover:text-yellow-300 duration-300">
+    <a href={href} target="_blank">{text}</a>
+</button>
